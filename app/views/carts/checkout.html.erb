@@ -22,16 +22,19 @@
         <% current_cart.cart_items.each do |cart_item| %>
           <tr>
             <td>
-              <%= link_to(cart_item.product.title, product_path(cart_item.product) %>
+              <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
             </td>
             <td>
               <%= cart_item.product.price %>
             </td>
+
             <td>
-              <%= cart.item.quantity %>
+              <%= cart_item.quantity %>
             </td>
+
           </tr>
         <% end %>
+
 
       </tbody>
     </table>
@@ -71,7 +74,7 @@
                         data: { disable_with: "Submitting..."} %>
         </div>
       <% end %>
-      
+
     </div>
   </div>
 </div>
